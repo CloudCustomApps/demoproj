@@ -1,24 +1,26 @@
 name: Deploy to github pages
 
 on:
-    push:
-        branches:
-            - master
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+  repository_dispatch:
+
 
 jobs:
-    build-and-deploy:
-        runs-on: ubuntu-latest
-        steps:
-            - name: Checkout
-              uses: actions/checkout@master
-
-            - name: Build and Deploy
-              uses: ./.github/actions/deploy
-              env:
-                  COMMIT_EMAIL: ashwin.mendon@rxpservices.com.au
-                  COMMIT_NAME: ashwinm
-                  ACCESS_TOKEN: ${{ secrets.PA_TOKEN }}
-                  BASE_BRANCH: master
-                  DEPLOY_BRANCH: gh-pages
-                  BUILD_SCRIPT: npm install && npm run build
-                  FOLDER: build
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@master
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v2.1.5
+      - run: npm install
+      - run: npm run build
+      - name: Deploy
+        uses: crazy-max/ghaction-github-pages@v2.3.0
+        with:
+          build_dir: build
+        env:
+          GITHUB_TOKEN: ${{ secrets.PA_TOKEN }}
