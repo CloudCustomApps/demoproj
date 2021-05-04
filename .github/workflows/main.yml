@@ -1,24 +1,26 @@
 name: Deploy to github pages
 
 on:
-    push:
-        branches:
-            - master
+  push:
+    branches:
+      - master
+  workflow_dispatch:
+
 
 jobs:
-    build-and-deploy:
-        runs-on: ubuntu-latest
-        steps:
-            - name: Checkout
-              uses: actions/checkout@master
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@master
 
-            - name: Build and Deploy
-              uses: ./.github/actions/deploy
-              env:
-                  COMMIT_EMAIL: ashwin.mendon@rxpservices.com.au
-                  COMMIT_NAME: ashwinm
-                  ACCESS_TOKEN: ${{ secrets.PA_TOKEN }}
-                  BASE_BRANCH: master
-                  DEPLOY_BRANCH: gh-pages
-                  BUILD_SCRIPT: npm install && npm run build
-                  FOLDER: build
+      - name: Build and Deploy
+        uses: ./.github/actions/deploy
+        env:
+            COMMIT_EMAIL: ashwin.mendon@rxpservices.com.au
+            COMMIT_NAME: ashwinm
+            ACCESS_TOKEN: ${{ secrets.PA_TOKEN }}
+            BASE_BRANCH: master
+            DEPLOY_BRANCH: gh-pages
+            BUILD_SCRIPT: npm install && npm run build
+            FOLDER: build
