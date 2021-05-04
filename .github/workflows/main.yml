@@ -22,5 +22,4 @@ jobs:
         with:
           build_dir: build
         env:
-          GITHUB_TOKEN:
-            ${{ secrets.PA_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.PA_TOKEN }}
