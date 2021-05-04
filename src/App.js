@@ -72,8 +72,10 @@ function App() {
 
       {/* component 4 */}
       <div className="bottom">
-        <StickyFooter copyright={`@${new Date().getFullYear()} RXP Services. All rights reserved`}
-          footerText='Creative agency making happier humans.' position={'left'}/>
+        {/* <StickyFooter copyright={`@${new Date().getFullYear()} RXP Services. All rights reserved`}
+          footerText='Creative agency making happier humans.' position={'left'}/> */}
+          <StickyFooter copyright={`@${new Date().getFullYear()} RXP Services. All rights reserved`}
+           position={'left'}/>
       </div>
       
 
