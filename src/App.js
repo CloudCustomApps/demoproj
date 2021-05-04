@@ -30,42 +30,28 @@ function App() {
     const {value} = e.target
     setModalHeader(value)
   }
-  return (
-    <div>
-      {/* component 1 */}
-      <div class='container'>
+  
+  const cardRows = (init, total) => {
+    let rows = [];
+    for(let i=init; i<total; i++){
+      rows.push(
       <CustomCard 
         viewAction={viewAction} 
         editAction={editAction}
-        cardHeading='Heading 1'
-        cardSubHeading='I am a Card 1'
+        cardHeading={`Heading ${i}`}
+        cardSubHeading={`I am a Card ${i}`}
         img={IMAGE}
-        cardClasses='cardClass'/>
-      <CustomCard 
-        viewAction={viewAction} 
-        cardHeading='Heading 2'
-        cardSubHeading='I am a Card 2'
-        img={IMAGE}
-        cardClasses='cardClass'/>
-        <CustomCard 
-        viewAction={viewAction} 
-        cardHeading='Heading 1'
-        cardSubHeading='I am a Card 1'
-        img={IMAGE}
-        cardClasses='cardClass'/>
-        <CustomCard 
-        viewAction={viewAction} 
-        cardHeading='Heading 1'
-        cardSubHeading='I am a Card 1'
-        img={IMAGE}
-        cardClasses='cardClass'/>
-        <CustomCard 
-        viewAction={viewAction} 
-        cardHeading='Heading 1'
-        cardSubHeading='I am a Card 1'
-        img={IMAGE}
-        cardClasses='cardClass'/>
-      </div>
+        cardClasses='cardClass'/>);
+    }
+    return rows;
+  }
+
+  return (
+    <div>
+      {/* component 1 */}
+      <div className='container'>    
+        {cardRows(1,6)}
+      </div>   
       {/* component 2*/}
        <CustomModal 
         isOpen={openModal} 
@@ -85,7 +71,11 @@ function App() {
       <SignIn/>
 
       {/* component 4 */}
-      <StickyFooter/>
+      <div className="bottom">
+        <StickyFooter copyright={`@${new Date().getFullYear()} RXP Services. All rights reserved`}
+          footerText='Creative agency making happier humans.' position={'left'}/>
+      </div>
+      
 
     </div>
   );
