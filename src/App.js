@@ -85,8 +85,10 @@ function App() {
         <div className="seperator"></div>
       {/* component 5 */}
         <div className="bottom bg-primary">
-          <StickyFooter copyright={`@${new Date().getFullYear()} RXP Services. All rights reserved`}
-            footerText='Creative agency making happier humans.' position={'left'}/>
+          {/* <StickyFooter copyright={`@${new Date().getFullYear()} RXP Services. All rights reserved`}
+            footerText='Creative agency making happier humans.' position={'left'}/> */}
+            <StickyFooter copyright={`@${new Date().getFullYear()} RXP Services. All rights reserved`}
+            position={'left'}/>
         </div>
       </div>
     </div>
