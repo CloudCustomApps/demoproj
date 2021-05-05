@@ -1,3 +1,9 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 .App {
   text-align: center;
 }
@@ -59,9 +65,20 @@
   justify-content: center;
 }
 
+.wrapper{
+  max-width: 1200px;
+  margin: auto;
+
+}
+
+.seperator{
+  padding: 80px;
+}
+
 .bottom {
-  position: absolute;
+  position: fixed;
   bottom: 0;
+  left: 0;
+  right: 0;
   width: 100%;
-  margin-top: 30px;
 }
