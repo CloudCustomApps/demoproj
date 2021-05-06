@@ -6,6 +6,8 @@ import {IMAGE} from './Constants';
 import { useState } from 'react';
 import {TextField} from '@material-ui/core';
 
+const classNames = require('classnames');
+
 function App() {
   const [openModal, setOpenModal] = useState(false);
   const [modalHeader, setModalHeader] = useState('Heading');
@@ -52,12 +54,12 @@ function App() {
       <div className="wrapper">
 
       {/* component 1 */}
-        <h1 className="text-primary">I am h1 component</h1>
-        <h2 className="text-red-400">I am h2 component</h2>
-        <h3 className="text-blue-500">I am h3 component</h3>
-        <h4 className="text-green-600"> I am h4 component</h4>
-        <h5 className="text-indigo-700">I am h5 component</h5>
-        <h6 className="text-yellow-900">I am h6 component</h6>
+        <div className={classNames("text-yellow-900", 'text-9xl')}>I am 9xl Text</div>
+        <div className={classNames("text-indigo-700", 'text-7xl')}>I am 7xl Text</div>
+        <div className={classNames("text-green-600", 'text-3xl')}> I am 3xl Text</div>
+        <div className={classNames("text-red-400", 'text-base')}>I am base Text</div>
+        <div className={classNames("text-blue-500", 'text-lg')}>I am lg Text</div>
+        <div className={classNames("text-primary", 'text-xs')}>I am xs Text</div>
       
       {/* component 2 */}
         <div className='container'>    
