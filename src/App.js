@@ -10,7 +10,7 @@ function App() {
 
       <StickyFooter
         copyright={`@${new Date().getFullYear()} RXP Services. All rights reserved`}
-        footerText="Creative agency making happier human."
+        footerText="Creative agency making happier humans."
         position={'left'}
       />
     </div>
