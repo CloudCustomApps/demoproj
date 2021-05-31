@@ -7,9 +7,10 @@ function App() {
   return (
     <div className="wrapper">
       <SignIn />
+
       <StickyFooter
         copyright={`@${new Date().getFullYear()} RXP Services. All rights reserved`}
-        footerText="Creative agency making happier humans."
+        footerText="Creative agency making happier human."
         position={'left'}
       />
     </div>
