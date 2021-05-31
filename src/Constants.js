@@ -29,6 +29,11 @@ export const CARDARRAY = [
     heading: 'Heading 6',
     subheading: 'I am Card 6',
   },
+  {
+    id: 7,
+    heading: 'Heading 7',
+    subheading: 'I am Card 7',
+  },
 ];
 
 export const IMAGE =
