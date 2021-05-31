@@ -1,4 +1,4 @@
-*{
+* {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -50,8 +50,12 @@
   cursor: pointer; /* Add a pointer cursor on mouse-over */
 }
 
-.success {background-color: #4CAF50;} /* Green */
-.success:hover {background-color: #46a049;}
+.success {
+  background-color: #4caf50;
+} /* Green */
+.success:hover {
+  background-color: #46a049;
+}
 
 .cardClass {
   height: 30%;
@@ -65,13 +69,14 @@
   justify-content: center;
 }
 
-.wrapper{
-  max-width: 1200px;
+.wrapper {
+  height: 100%;
   margin: auto;
-
+  display: flex;
+  flex-direction: column;
 }
 
-.seperator{
+.seperator {
   padding: 80px;
 }
 
