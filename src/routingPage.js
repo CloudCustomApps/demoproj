@@ -6,8 +6,7 @@ import './index.css';
 const RoutingPage = (props) => {
   return (
     <Switch>
-      <Route path="/" exact component={App} {...props} />
-      <Route path="/demoprod" exact component={App} {...props} />
+      <Route path="/" component={App} {...props} />
     </Switch>
   );
 };
