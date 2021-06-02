@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
-import { StickyFooter, SignIn } from '../node_modules/designops/dist/index.js';
-import '../node_modules/designops/dist/designops.css';
+import { StickyFooter, SignIn } from 'designops';
+import 'designops/dist/designops.css';
 
 function App() {
   return (
