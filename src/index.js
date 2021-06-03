@@ -7,7 +7,7 @@ import { BrowserRouter } from 'react-router-dom';
 import RoutingPage from './routingPage';
 
 ReactDOM.render(
-  <BrowserRouter>
+  <BrowserRouter basename={'demoproj'}>
     <RoutingPage />
   </BrowserRouter>,
   document.getElementById('root'),
