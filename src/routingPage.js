@@ -9,7 +9,7 @@ const RoutingPage = (props) => {
     <Switch>
       <Route path="/mainpage" exact component={App} {...props} />
       <Route path="/dashboard" exact component={Dashboard} {...props} />
-      <Route path="/" exact component={App} {...props} />
+      <Route path="/" component={App} {...props} />
     </Switch>
   );
 };
