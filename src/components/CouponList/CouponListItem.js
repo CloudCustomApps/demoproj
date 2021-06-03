@@ -5,7 +5,7 @@ import classNames from 'classnames';
 export default function CouponListItem(props) {
   const classes = useStyles();
   const {
-    coupon: { header, image, desc },
+    coupon: { header, createdAt, image, desc },
     onClick,
   } = props;
 
@@ -16,6 +16,9 @@ export default function CouponListItem(props) {
           className={classNames('text-xl', 'text-indigo-800', classes.header)}
           onClick={onClick}>
           {header}
+        </div>
+        <div className={classNames('text-sm', 'text-gray-500')}>
+          {createdAt.toLocaleDateString()}
         </div>
 
         <div className={classNames('text-base', 'text-gray-600')}>{desc}</div>
