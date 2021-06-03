@@ -6,7 +6,6 @@ import { CustomModal } from 'designops';
 import { getRandomModalConfig } from '../../libs/modal';
 import classNames from 'classnames';
 import SortIcon from '@material-ui/icons/Sort';
-import FilterListIcon from '@material-ui/icons/FilterList';
 
 const defaultConfig = {
   modal: {
