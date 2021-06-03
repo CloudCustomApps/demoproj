@@ -4,6 +4,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import CouponListItem from './CouponListItem';
 import { CustomModal } from 'designops';
 import { getRandomModalConfig } from '../../libs/modal';
+import classNames from 'classnames';
 
 const defaultConfig = {
   modal: {
@@ -33,6 +34,9 @@ export default function CouponList(props) {
 
   return (
     <>
+      <div className={classNames('text-5xl', 'text-red-600')}>
+        🔥 Hot Deals 🔥
+      </div>
       <Grid container spacing={3} className={classes.root}>
         {coupons.map((coupon, index) => (
           <Grid item xs={12} key={index}>
