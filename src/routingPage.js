@@ -7,7 +7,7 @@ import Dashboard from './Dashboard';
 const RoutingPage = (props) => {
   return (
     <Switch>
-      <Route path="/" exact component={App} {...props} />
+      <Route path="/"  component={App} {...props} />
       <Route path="/mainpage" exact component={App} {...props} />
       <Route path="/dashboard" exact component={Dashboard} {...props} />
     </Switch>
