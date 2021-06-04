@@ -4,11 +4,11 @@ import './index.css';
 
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
-import RoutingPage from './routingPage';
+import App from './App';
 
 ReactDOM.render(
-  <BrowserRouter>
-    <RoutingPage />
+  <BrowserRouter basename={'demoproj'}>
+    <App />
   </BrowserRouter>,
   document.getElementById('root'),
 );
