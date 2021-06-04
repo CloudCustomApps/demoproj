@@ -13,7 +13,11 @@ const SignInPage = (props) => {
 
   return (
     <div className={classes.container}>
-      <SignIn firstLabel="Please enter your email" handleClick={handleClick} />
+      <SignIn
+        validation="true"
+        firstLabel="Please enter your email"
+        handleClick={handleClick}
+      />
     </div>
   );
 };
