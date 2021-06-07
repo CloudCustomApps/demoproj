@@ -18,14 +18,18 @@ const defaultConfig = {
 export default function CouponList(props) {
   const classes = useStyles();
   const { coupons } = props;
+  const [couponsState, setCouponsState] = React.useState([]);
   const [modalOpen, setModalOpen] = React.useState(false);
   const [config, setConfig] = React.useState(defaultConfig);
   const [isAsc, setIsAsc] = React.useState(false);
 
   React.useEffect(() => {
-    coupons.sort((a, b) =>
-      isAsc ? b.createdAt - a.createdAt : a.createdAt - b.createdAt,
-    );
+    if (coupons.length > 0) {
+      const sorted = [...coupons].sort((a, b) =>
+        isAsc ? a.createdAt - b.createdAt : b.createdAt - a.createdAt,
+      );
+      setCouponsState(sorted);
+    }
   }, [coupons, isAsc]);
 
   const onClickItem = (selectedItem) => {
@@ -47,7 +51,7 @@ export default function CouponList(props) {
   return (
     <>
       <div className={classes.header}>
-        <div className={classNames('text-5xl', 'text-red-600', classes.title)}>
+        <div className={classNames('text-5xl', 'text-primary', classes.title)}>
           🔥 Hot Deals 🔥
         </div>
         <Button onClick={onSortList} startIcon={<SortIcon />}>
@@ -62,7 +66,7 @@ export default function CouponList(props) {
         </Button> */}
       </div>
       <Grid container spacing={3} className={classes.list}>
-        {coupons.map((coupon, index) => (
+        {couponsState.map((coupon, index) => (
           <Grid item xs={12} key={index}>
             <CouponListItem
               coupon={coupon}
