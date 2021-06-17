@@ -8,7 +8,7 @@
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^11.2.6",
     "@testing-library/user-event": "^13.1.5",
-    "chokidar": "^3.5.1",
+    "chokidar": "^3.5.2",
     "designops": "github:RXPServices/designops#v0.1.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
