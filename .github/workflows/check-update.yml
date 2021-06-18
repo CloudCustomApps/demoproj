@@ -1,6 +1,7 @@
 name: Check dependencies update
 
 on:
+  workflow_dispatch:
   repository_dispatch:
     types: [check_update]
 
