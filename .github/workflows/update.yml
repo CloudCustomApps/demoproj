@@ -1,0 +1,16 @@
+name: Update dependencies
+
+on:
+  workflow_dispatch:
+
+jobs:
+  check-dependencies:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout 
+        uses: actions/checkout@v2
+        
+      - name: npm depcheck
+        uses: tj-actions/depcheck@v7.2
+        with:
+          ignores: 'eslint,babel-*'
