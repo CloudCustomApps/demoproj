@@ -22,4 +22,3 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           bump-version: patch                 # defaults to not bumping the package version
-          target-version: minor               # defaults to 'latest'
