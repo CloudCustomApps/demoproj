@@ -16,7 +16,10 @@ jobs:
           echo ${{ github.event.client_payload.ref }}
           echo ${{ github.event.client_payload.sha }}
       
-      - name: npm depcheck
-        uses: tj-actions/depcheck@v7.2
+      - name: Update dependencies
+        uses: neverendingqs/gh-action-node-update-deps@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          ignores: 'eslint,babel-*'
+          bump-version: patch                 # defaults to not bumping the package version
+          target-version: minor               # defaults to 'latest'
