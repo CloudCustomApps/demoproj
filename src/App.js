@@ -15,7 +15,7 @@ function App() {
         <RoutingPage />
       </div>
       <StickyFooter
-        copyright={`@${new Date().getFullYear()} RXP Services. All rights reserved`}
+        copyright={`@${new Date().getFullYear()} Capgemini. All rights reserved`}
         footerText=" "
         position={'left'}
       />
