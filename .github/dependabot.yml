@@ -1,6 +1,32 @@
 version: 2
 updates:
-  - package-ecosystem: 'npm'
-    directory: '/'
+  - package-ecosystem: "npm"
+    directory: "/"
     schedule:
-      interval: 'daily'
+      interval: "weekly"
+      day: "friday"
+      time: "09:00"
+      timezone: "Australia/Victoria"
+    # Allow up to 10 open pull requests (default is 5)
+    open-pull-requests-limit: 10     
+    allow:
+      - dependency-type: production #checks for dependencies in compiled app, not dev dependencies (update to 'direct' for all dependencies)
+    # Ignore any specific dependencies or versions in Prs
+    ignore:
+      # For React, ignore all updates for version 18
+      - dependency-name: "react"
+        versions: ["18.x"]
+      - dependency-name: "lodash"
+    labels:
+      - "dependencies"
+    target-branch: "main"
+    commit-message:
+      prefix: "dependabot"
+    # Add assignees
+    assignees:
+      - "assignee_1"
+    # Add reviewers
+    reviewers:
+      - "reviewer_1"
+      - "reviewer_2"
+      - "reviewer_3"
