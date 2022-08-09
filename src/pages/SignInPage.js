@@ -1,14 +1,14 @@
 import React from 'react';
 import { SignIn } from 'designops';
-import { useHistory } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { makeStyles } from '@material-ui/core/styles';
 
 const SignInPage = (props) => {
-  const history = useHistory();
+  const navigate = useNavigate();
   const classes = useStyles();
 
   function handleClick() {
-    history.push('/dashboard');
+    navigate.push('/dashboard');
   }
 
   return (
