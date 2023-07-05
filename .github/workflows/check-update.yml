@@ -15,6 +15,9 @@ jobs:
       - run: |
           echo ${{ github.event.client_payload.ref }}
           echo ${{ github.event.client_payload.sha }}
+      
+      - name: Configure Git
+        run: git config --global safe.directory '*'
         
       - name: Update dependencies
         uses: neverendingqs/gh-action-node-update-deps@master
