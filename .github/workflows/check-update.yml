@@ -11,11 +11,6 @@ jobs:
     steps:
       - name: Checkout 
         uses: actions/checkout@v2
-      
-      - name: Setup Node.js environment
-        uses: actions/setup-node@v3
-        with:
-          node-version: 16.13.1
           
       - run: |
           echo ${{ github.event.client_payload.ref }}
