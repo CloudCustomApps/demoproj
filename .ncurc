@@ -1,8 +1,9 @@
 {
-  "packageFile": "package.json",
-  "upgrade": {
-    "ignore": [
-      "react"
+    "packageFile": "package.json",
+    "reject": [
+      {
+        "packageNames": ["react"],
+        "versions": ["*"]
+      }
     ]
   }
-}
