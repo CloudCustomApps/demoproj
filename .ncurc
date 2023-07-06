@@ -1,0 +1,8 @@
+{
+  "packageFile": "package.json",
+  "upgrade": {
+    "ignore": [
+      "react"
+    ]
+  }
+}
