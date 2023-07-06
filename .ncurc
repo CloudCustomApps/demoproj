@@ -1,0 +1,9 @@
+{
+    "packageFile": "package.json",
+    "reject": [
+      {
+        "packageNames": ["react"],
+        "versions": ["*"]
+      }
+    ]
+  }
