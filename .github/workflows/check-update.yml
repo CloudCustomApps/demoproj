@@ -20,6 +20,6 @@ jobs:
         run: git config --global safe.directory '*'
         
       - name: Update dependencies
-        uses: neverendingqs/gh-action-node-update-deps@main
+        uses: neverendingqs/gh-action-node-update-deps@v2
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
