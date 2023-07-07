@@ -1,7 +1,0 @@
-{
-    "packageFile": "package.json",
-    "reject": [
-      "react@*"
-    ]
-  }
-  
