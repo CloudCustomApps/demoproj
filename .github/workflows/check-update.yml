@@ -15,18 +15,8 @@ jobs:
       - run: |
           echo ${{ github.event.client_payload.ref }}
           echo ${{ github.event.client_payload.sha }}
-      
-      - name: Initialize Git repository
-        run: |
-          cd /github/workspace
-          git init
-      
-      - name: Set git safe directory
-        run: |
-          cd /github/workspace
-          git config --global --add safe.directory /github/workspace
         
       - name: Update dependencies
-        uses: neverendingqs/gh-action-node-update-deps@master
+        uses: neverendingqs/gh-action-node-update-deps@v2
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
