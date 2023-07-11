@@ -15,21 +15,6 @@ jobs:
       - run: |
           echo ${{ github.event.client_payload.ref }}
           echo ${{ github.event.client_payload.sha }}
-      
-      - name: Initialize Git repository
-        run: |
-          cd /github/workspace
-          git init
-      
-      - name: Set git safe directory
-        run: |
-          cd /github/workspace
-          git config --global --add safe.directory /github/workspace
-      
-      - name: Setup Node.js environment
-        uses: actions/setup-node@v3
-        with:
-          node-version: 16
         
       - name: Update dependencies
         uses: neverendingqs/gh-action-node-update-deps@v2
