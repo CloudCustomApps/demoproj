@@ -3,6 +3,7 @@
   "reject": [
     "react",
     "react-dom",
-    "@testing-library/react"
+    "@testing-library/react",
+    "react-router-dom"
   ]
 }
